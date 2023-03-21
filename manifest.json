@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Speak",
+  "description": "Speak provides you live captions for presentations",
+  "version": "0.0.1",
+  "author": "Hashmat Noorani",
+  "action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "Speak",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "minimum_chrome_version": "25",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"],
+      "all_frames": true
+    }
+  ]
+}
